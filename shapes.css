@@ -1,0 +1,92 @@
+h2{
+  text-align:center;
+  color:darkblue;
+  font-weight:bold;
+  text-decoration: underline;
+}
+.hexagon{
+  position:relative;
+  width:100px;
+  height: 0;
+  bottom:100px;
+  border-top: 120px solid black;
+  border-left:100px solid transparent;
+  border-right: 100px solid transparent;
+}
+
+.hexagon::before{
+content: "";
+position:absolute;
+width: 100px;
+height: 0px;
+border-bottom: 120px solid black;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+left:-100px;
+top:-240px;
+}
+.leaf{
+  margin-left: 350px;
+  margin-top: 10px;
+  height: 200px;
+  width:200px;
+  background-color:rgb(4, 179, 27);
+  border-radius: 250px 0  250px  0;
+}
+.parallelogram{
+  height: 120px;
+  width: 200px;
+  background-color: blue;
+  margin-left: 600px;
+  margin-top: -320px;
+  transform: skew(-20deg);
+}
+.trapezium{
+  margin-top: 97px;
+  margin-left: 250px;
+  width: 100px;
+  height: 0px;
+  border-bottom:100px solid yellow;
+  border-left: 100px solid transparent;
+  border-right : 100px solid transparent;
+}
+.star{
+  position:relative;
+  display:block;
+  width: 0px;
+  height: 0px;
+  left:90px;
+  border-top: 100px solid pink;
+  border-left: 70px solid transparent;
+  border-right:100px solid transparent;
+  transform:rotate(35deg);
+}
+
+.star:before{
+  border-bottom: 80px solid pink;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position:absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display:block;
+  content: '';
+  transform: rotate(-35deg);
+}
+
+.star:after {
+  content:'';
+  display: block;
+  position:absolute;
+  left:-105px;
+  top:3px;
+  width:0px;
+  height:0px;
+  border-top:160px solid pink;
+  border-left:100px solid transparent;
+  border-right:100px solid transparent;
+  border: bottom 70px solid pink;
+  transform: rotate(-70deg);
+}
